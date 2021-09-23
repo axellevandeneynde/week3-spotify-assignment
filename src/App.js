@@ -1,24 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import './bulma.min.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import {  
+  RecoilRoot,  
+  atom,  
+  selector,  
+  useRecoilState,  
+  useRecoilValue,} from 'recoil';
+
+import HomePage from './pages/home.page';
+import LoginPage from './pages/login.page';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <RecoilRoot>
+    <Router>
+      <Switch>
+      <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/login">
+            <LoginPage/>
+          </Route>
+      </Switch>
+    </Router>
+    <nav className="navbar is-primary is-fixed-top">
+    <div className="navbar-brand">
+      <div className="navbar-item">
+      <h1>Spotify assignment</h1>
+      </div>
     </div>
+    </nav>
+    </RecoilRoot>
   );
 }
 

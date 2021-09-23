@@ -1,0 +1,22 @@
+[
+    {
+        "name": "John",
+        "password": "1234",
+        "role": "owner"
+    },
+    {
+        "name": "Lotte",
+        "password": "1235",
+        "role": "member"
+    },
+    {
+        "name": "Anne",
+        "password": "1236",
+        "role": "member"
+    },
+    {
+        "name": "Jane",
+        "password": "1237",
+        "role": "member"
+    }
+]
